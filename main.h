@@ -4,5 +4,5 @@
  */
 
 int _printf(const char *format, ...);
-char printf_string (char *src);
-char printf_char (char c);
+char print_string (char *src);
+char print_char (char c);
