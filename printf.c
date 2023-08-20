@@ -8,12 +8,13 @@
 
 int _printf(const char *format, ...)
 {
-	int count = 0, i;
+	int count, i;
 
 	va_list n;
-
+	count = 0;
+	i = 0;
 	va_start(n, format);
-	for (i = 0; format[i] != '\0'; i++)
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
@@ -32,6 +33,7 @@ int _printf(const char *format, ...)
 		else
 			print_char(format[i]);
 		count++;
+		i++;
 	}
 	va_end(n);
 	return (count);
