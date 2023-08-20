@@ -6,7 +6,7 @@
 * Return : no return
 */
 
-void print_string(char *src)
+int print_string(char *src)
 {
 	int i;
 
