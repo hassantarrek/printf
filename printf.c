@@ -9,9 +9,9 @@
 
 int _printf(const char *format, ...)
 {
-	_convert x[] = {
-		{"%s", printf_string}, {"%c", printf_char},
-		{"%%", printf_37}};
+	_convert z[] = {
+		{"%s", print_string}, {"%c", print_char},
+		{"%%", print_percent}};
 	va_list args;
 	int x, y, len = 0;
 
@@ -23,9 +23,9 @@ Here:
 	{
 		for (y = 13; y >= 0; y--)
 		{
-			if (m[y].id[0] == format[x] && m[y].id[1] == format[x + 1])
+			if (z[y].id[0] == format[x] && z[y].id[1] == format[x + 1])
 			{
-				len += m[y].f(args);
+				len += z[y].f(args);
 				x = x + 2;
 				goto Here;
 			}
