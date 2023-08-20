@@ -14,7 +14,7 @@ void print_string(char *src)
 
 	while (src[i] != '\0')
 	{
-		write(1, src[i], 1);
+		write(1, &src[i], 1);
 		i++;
 	}
 }

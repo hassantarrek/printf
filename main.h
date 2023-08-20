@@ -11,7 +11,7 @@
  */
 
 int _printf(const char *format, ...);
-char print_string (char *src);
-char print_char (char c);
+void print_string (char *src);
+void print_char (char c);
 
 #endif
