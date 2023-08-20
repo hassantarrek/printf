@@ -1,45 +1,38 @@
-#include <stdarg.h>
 #include "main.h"
+
 /**
  * _printf - mirror function of printf
  * @format: input format
- *
+ * this function is made by shaimaa and hassan :)
  * Return: count of input value
  */
 
 int _printf(const char *format, ...)
 {
-	int count, i;
-	va_list n;
+	_convert x[] = {
+		{"%s", printf_string}, {"%c", printf_char},
+		{"%%", printf_37}};
+	va_list args;
+	int x, y, len = 0;
 
-	count = 0;
-	i = 0;
-if (format ==NULL)
-return (-1);
-	va_start(n, format);
-	while (format[i] != '\0')
+	va_start(args, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+Here:
+	for (x = 0; format[x] != '\0'; x++)
 	{
-		if (format[i] == '%')
+		for (y = 13; y >= 0; y--)
 		{
-			i++;
-			if (format[i] == 'c')
+			if (m[y].id[0] == format[x] && m[y].id[1] == format[x + 1])
 			{
-				print_char(va_arg(n, int));
+				len += m[y].f(args);
+				x = x + 2;
+				goto Here;
 			}
-			else if (format[i] == 's')
-			{
-				print_string((va_arg(n, void*)));
-			}
-else if (format[i] ==' ' || format[i] =='\0')
-return (-1);
-			else
-				print_char(format[i]);
 		}
-		else
-			print_char(format[i]);
-		count++;
-		i++;
+		_putchar(format[x]);
+		len++;
 	}
-	va_end(n);
-	return (count);
+	va_end(args);
+	return (len);
 }
