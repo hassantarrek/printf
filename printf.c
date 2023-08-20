@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 
 	count = 0;
 	i = 0;
+if (format ==NULL)
+return (-1);
 	va_start(n, format);
 	while (format[i] != '\0')
 	{
@@ -28,6 +30,8 @@ int _printf(const char *format, ...)
 			{
 				print_string((va_arg(n, void*)));
 			}
+else if (format[i] ==' ' || format[i] =='\0')
+return (-1);
 			else
 				print_char(format[i]);
 		}
