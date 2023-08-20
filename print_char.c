@@ -6,7 +6,7 @@
  * @c: character
  * Return: the output character
  */
-int print_char(char c)
+void print_char(char c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
 }
