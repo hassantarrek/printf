@@ -10,8 +10,8 @@
 int _printf(const char *format, ...)
 {
 	int count, i;
-
 	va_list n;
+	
 	count = 0;
 	i = 0;
 	va_start(n, format);
