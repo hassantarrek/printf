@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	else if (format[0] == '%' && format[1] == " ")	
+	else if (format[0] == '%' && format[1] == ' ')	
 	{
 		return (-1);
 	}
