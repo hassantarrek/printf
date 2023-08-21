@@ -8,13 +8,15 @@
 #include <unistd.h>
 
 /**
- * header file
- * function _printf
+ * struct convert - struct for specifiers
+ * _convert - Typedef for struct convert
+ * @specifier: pointer to specifier type
+ * @f: pointer to function
  */
 typedef struct convert
 {
-    char *specifier;
-    int (*f)();
+	char *specifier;
+	int (*f)();
 } _convert;
 
 int _printf(const char *format, ...);
@@ -23,6 +25,5 @@ int print_char(va_list val);
 int print_percent(void);
 int _putchar(char c);
 int _strlen(char *s);
-
 
 #endif
