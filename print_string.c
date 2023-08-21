@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-* print_string - print a string 'logicly'
+* pr_string - print a string 'logicly'
 * @val: arg
 * Return: length of the strong string
 */
 
-int print_string(va_list val)
+int pr_string(va_list val)
 {
 	char *u;
 	int x, len;
