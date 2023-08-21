@@ -20,12 +20,12 @@ typedef struct convert
 } _convert;
 
 int _printf(const char *format, ...);
-int print_string(va_list val);
-int print_char(va_list val);
-int print_percent(void);
+int pr_string(va_list val);
+int pr_char(va_list val);
+int pr_percent(void);
 int _putchar(char c);
 int _strlen(char *s);
-int print_int(va_list args);
-int print_dec(va_list args);
+int pr_int(va_list args);
+int pr_dec(va_list args);
 
 #endif
