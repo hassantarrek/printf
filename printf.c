@@ -5,7 +5,6 @@
  * this function is made by shaimaa and hassan :)
  * Return: count of input value
  */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
