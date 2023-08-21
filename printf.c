@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 
 	_convert x[] = {
 		{"%s", print_string}, {"%c", print_char},
-		{"%%", print_percent}, {"%i", printf_int}, {"%d", printf_dec},
+		{"%%", print_percent}, {"%i", print_int}, {"%d", print_dec},
 		{NULL, NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
