@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_int - prints integer
+ * pr_int - prints integer
  * @args: arg
  * Return: number of printed things
  */
 
-int print_int(va_list args)
+int pr_int(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
