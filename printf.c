@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			y++;
+			z = 0;
 			while (x[z].specifier != NULL)
 			{
 				if (format[y] == x[z].specifier[1])
