@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	_convert x[] = {
 		{"%s", print_string}, {"%c", print_char},
 		{"%%", print_percent}, {NULL, NULL}};
-	if (format == NULL || (format[0] == '%' && (format[1] == '\0' || format[1] == ' '))
+	if (format == NULL || (format[0] == '%' && (format[1] == '\0' || format[1] == ' ')))
 	{
 		return (-1);
 	}
