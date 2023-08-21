@@ -11,11 +11,10 @@
  * header file
  * function _printf
  */
-
-typedef struct format
+typedef struct convert
 {
-	char *id;
-	int (*f)();
+    char *specifier;
+    int (*f)();
 } _convert;
 
 int _printf(const char *format, ...);

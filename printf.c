@@ -9,30 +9,42 @@
 
 int _printf(const char *format, ...)
 {
-	_convert z[] = {
-		{"%s", print_string}, {"%c", print_char},
-		{"%%", print_percent}};
 	va_list args;
-	int x, y, len = 0;
+	int count = 0, y = 0, z = 0;
+
+	_convert x[] = {
+		{"%s", print_string}, {"%c", print_char},
+		{"%%", print_percent}, {NULL, NULL}};
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		return (-1);
+	}
 
 	va_start(args, format);
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-Here:
-	for (x = 0; format[x] != '\0'; x++)
+	while (format[y] != '\0')
 	{
-		for (y = 13; y >= 0; y--)
+		if (format[y] != '%')
 		{
-			if (z[y].id[0] == format[x] && z[y].id[1] == format[x + 1])
-			{
-				len += z[y].f(args);
-				x = x + 2;
-				goto Here;
-			}
+			_putchar(format[y]);
+			count++;
+			y++;
 		}
-		_putchar(format[x]);
-		len++;
+		else
+		{
+			y++;
+			while (x[z].specifier != NULL)
+			{
+				if (format[y] == x[z].specifier[1])
+				{
+					count += x[z].f(args);
+					break;
+				}
+				z++;
+			}
+			y++;
+		}
 	}
 	va_end(args);
-	return (len);
+	return (count);
 }
