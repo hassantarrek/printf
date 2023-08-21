@@ -15,20 +15,10 @@ int _printf(const char *format, ...)
 	_convert x[] = {
 		{"%s", print_string}, {"%c", print_char},
 		{"%%", print_percent}, {NULL, NULL}};
-
-	if (format == NULL )
+	if (format == NULL || (format[0] == '%' && (format[1] == '\0' || format[1] == ' '))
 	{
 		return (-1);
 	}
-	else if (format[0] == '%' && format[1] == '\0')	
-	{
-		return (-1);
-	}
-	else if (format[0] == '%' && format[1] == ' ')	
-	{
-		return (-1);
-	}
-	
 	va_start(args, format);
 	while (format[y] != '\0')
 	{
