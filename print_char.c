@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * print_char - prints a character
+ * pr_char - prints a character
  * @val: arg
  * Return: 1
  */
-int print_char(va_list val)
+
+int pr_char(va_list val)
 {
 	char x;
 
