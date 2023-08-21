@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * _printf - mirror function of printf
  * @format: input format
  * this function is made by shaimaa and hassan :)
  * Return: count of input value
  */
+
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -12,10 +14,14 @@ int _printf(const char *format, ...)
 
 	_convert x[] = {
 		{"%s", print_string}, {"%c", print_char},
-		{"%%", print_percent}, {NULL, NULL}};
-	if (format == NULL ||
-	(format[0] == '%' && (format[1] == '\0' || format[1] == ' ')))
+		{"%%", print_percent}, {"%i", printf_int}, {"%d", printf_dec},
+		{NULL, NULL}};
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
 		return (-1);
+	}
+
 	va_start(args, format);
 	while (format[y] != '\0')
 	{
