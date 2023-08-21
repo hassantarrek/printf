@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - mirror function of printf
  * @format: input format
@@ -16,9 +15,7 @@ int _printf(const char *format, ...)
 		{"%s", print_string}, {"%c", print_char},
 		{"%%", print_percent}, {NULL, NULL}};
 	if (format == NULL || (format[0] == '%' && (format[1] == '\0' || format[1] == ' ')))
-	{
 		return (-1);
-	}
 	va_start(args, format);
 	while (format[y] != '\0')
 	{
