@@ -13,8 +13,8 @@ int _printf(const char *format, ...)
 	int count = 0, y = 0, z = 0;
 
 	_convert x[] = {
-		{"%s", print_string}, {"%c", print_char},
-		{"%%", print_percent}, {"%i", print_int}, {"%d", print_dec},
+		{"%s", pr_string}, {"%c", pr_char},
+		{"%%", pr_percent}, {"%i", pr_int}, {"%d", pr_dec},
 		{NULL, NULL}};
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
