@@ -7,7 +7,7 @@
 
 int pr_oct(va_list args)
 {
-	int arr[10];
+	unsigned int arr[10];
 	int count, i;
 	unsigned int n = va_arg(args, unsigned int);
 
