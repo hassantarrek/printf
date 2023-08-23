@@ -27,5 +27,6 @@ int _putchar(char c);
 int _strlen(char *s);
 int pr_int(va_list args);
 int pr_dec(va_list args);
-
+int pr_oct(va_list args);
+int binary(va_list args);
 #endif
