@@ -15,7 +15,8 @@ int _printf(const char *format, ...)
 	_convert x[] = {
 		{"%s", pr_string}, {"%c", pr_char},
 		{"%%", pr_percent}, {"%i", pr_int}, {"%d", pr_dec},
-		{"%o", pr_oct}, {"%b", binary}, {NULL, NULL}};
+		{"%o", pr_oct}, {"%b", binary},
+		{"%u", pr_unsigned}, {NULL, NULL}};
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(args, format);
