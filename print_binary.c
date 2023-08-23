@@ -13,17 +13,25 @@ int binary(va_list args)
 
 	count = 0;
 	m = 0;
-	while (n != 0)
+	if ( n == 0)
 	{
-		res[m] = n % 2;
-		n /= 2;
-		m++;
+		_putchar('0');
+		return (1);
 	}
-	for (i = m; i >= 0; i--)
+	else
 	{
-		_putchar(res[i] + '0');
-		count++;
+		while (n != 0)
+		{
+			res[m] = n % 2;
+			n /= 2;
+			m++;
+		}
+		for (i = m - 1; i >= 0; i--)
+		{
+			_putchar(res[i] + '0');
+			count++;
+		}
+		return (count);
 	}
-	return (count);
 }
 

@@ -31,7 +31,10 @@ int main(void)
     _printf("Character:[%c]\n", 'H');
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
+    _printf("reversed String:[%r]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    _printf("binary of 15 is :[%b]\n", 15);
+    printf("binary of 15 is :[%d]\n",1111);
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
     len = _printf("Percent:[%%]\n");
