@@ -8,7 +8,8 @@
 int binary(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	unsigned int res[32], m, i, count;
+	unsigned int res[32];
+	int m, i, count;
 
 	count = 0;
 	m = 0;

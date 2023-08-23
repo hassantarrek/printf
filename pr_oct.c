@@ -21,7 +21,7 @@ int pr_oct(va_list args)
 	}
 	while (i >= 0)
 	{
-		if (arr[i] >= 0 && arr[i] <= 9)
+		if (arr[i] <= 9)
 		{
 			_putchar(arr[i] + '0');
 			count++;
