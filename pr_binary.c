@@ -18,7 +18,7 @@ int binary(va_list args)
 		n /= 2;
 		m++;
 	}
-	for (i = m - 1; i >= 0; i--)
+	for (i = m; i >= 0; i--)
 	{
 		_putchar(res[i] + '0');
 		count++;
