@@ -12,7 +12,7 @@ int pr_rev_str(va_list val)
         int x, len;
 
         u = va_arg(val, char *);
-        if (u == NULL)
+        if (u == '\0')
         {
 		_putchar('%');
 		_putchar('r');
