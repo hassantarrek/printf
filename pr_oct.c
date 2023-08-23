@@ -5,7 +5,7 @@
  * Return: count of printed digits
  */
  
-int pr_oct (va_list args)
+int pr_oct(va_list args)
 {
 	int arr[10];
 	int count, i;
