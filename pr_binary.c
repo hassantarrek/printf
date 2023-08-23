@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * binary - print binary number
  * @args: takes variadic func argument
