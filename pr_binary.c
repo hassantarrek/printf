@@ -5,7 +5,7 @@
  * Return: count of printed digits
  */
  
-int binary (va_list args)
+int binary(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
 	int res[32], m, i;
