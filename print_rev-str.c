@@ -14,9 +14,11 @@ int pr_rev_str(va_list val)
         u = va_arg(val, char *);
         if (u == NULL)
         {
-		_putchar('%');
-		_putchar('r');
-                return (2);
+		u = "(null)";
+		len = _strlen(u);
+		for (x = 0; x < len; x++)
+		_putchar(u[x]);
+		return (len);
         }
         else
         {
