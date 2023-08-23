@@ -8,10 +8,10 @@
 int binary(va_list args)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	int res[32], m, i;
+	int res[32], m, i, count;
 
-	int count = 0;
-	int m = 0;
+	count = 0;
+	m = 0;
 	while(n != 0)
 	{
 		res[m]= n % 2;
@@ -20,7 +20,7 @@ int binary(va_list args)
 	}
 	for (i = m - 1; i >= 0; i--)
 		{
-		_put_char(res[i] + '0');
+		_putchar(res[i] + '0');
 		count++;
 		}
 	 return (count);
