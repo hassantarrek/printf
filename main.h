@@ -30,4 +30,5 @@ int pr_dec(va_list args);
 int pr_oct(va_list args);
 int binary(va_list args);
 int pr_unsigned(va_list args);
+int pr_rev_str(va_list val);
 #endif
