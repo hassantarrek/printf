@@ -13,6 +13,11 @@ int pr_oct(va_list args)
 
 	i = 0;
 	count = 0;
+	if (n == 0)
+	{
+		_putchar('0');
+		return(0);
+	}
 	while (n != 0)
 	{
 		arr[i] = (n % 8);
